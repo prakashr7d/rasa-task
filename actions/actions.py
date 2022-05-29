@@ -23,7 +23,7 @@ class ActionGetPincode(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         res = requests.get(f"https://api.postalpincode.in/pincode/{tracker.get_slot('pincode')}")
-        dispatcher.utter_message(f"{tracker.get_slot('pincode')}: {res.json()[0]['PostOffice'][0]['State']}")
+        dispatcher.utter_message(f"Your state for the pincode is {res.json()[0]['PostOffice'][0]['State']}")
         return []
 
 
@@ -36,7 +36,7 @@ class ActionGetState(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         res = requests.get(f"https://api.postalpincode.in/pincode/{tracker.get_slot('pincode')}")
-        dispatcher.utter_message(f"{tracker.get_slot('pincode')}: {res.json()[0]['PostOffice'][0]['Name']}")
+        dispatcher.utter_message(f"you City name is {res.json()[0]['PostOffice'][0]['Name']}")
         return []
 
 
@@ -49,5 +49,5 @@ class ActionGetDistrict(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         res = requests.get(f"https://api.postalpincode.in/pincode/{tracker.get_slot('pincode')}")
-        dispatcher.utter_message(f"{tracker.get_slot('pincode')}: {res.json()[0]['PostOffice'][0]['District']}")
+        dispatcher.utter_message(f"Your district name is {res.json()[0]['PostOffice'][0]['District']}")
         return []

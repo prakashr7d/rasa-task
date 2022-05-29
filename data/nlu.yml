@@ -96,11 +96,11 @@ nlu:
     - [783478](pincode)
     - [509011](pincode)
     - [608001](pincode)
-- intent: city
+- intent: city_by_pincode
   examples: |
     - city
     - know about my city.
-- intent: district
+- intent: district_by_pincode
   examples: |
     - district
     - know my district.

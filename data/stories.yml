@@ -38,7 +38,7 @@ stories:
 
 - story: city rule
   steps:
-  - intent: city
+  - intent: city_by_pincode
   - action: utter_ask_pincode
   - intent: get_pincode
   - action: action_get_city
@@ -46,16 +46,16 @@ stories:
 
 - story: district rule
   steps:
-  - intent: district
+  - intent: district_by_pincode
   - action: utter_ask_pincode
   - intent: get_pincode
   - action: action_get_district
 
-- story: interactive_story_1
+- story: city_by_pincode
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: city
+  - intent: city_by_pincode
   - action: utter_ask_pincode
   - intent: get_pincode
     entities:
@@ -64,7 +64,7 @@ stories:
     - pincode: '608001'
   - action: action_get_city
 
-- story: interactive_story_1
+- story: state by pincode
   steps:
   - intent: greet
   - action: utter_greet
@@ -77,11 +77,11 @@ stories:
     - pincode: '608001'
   - action: action_get_state
 
-- story: interactive_story_1
+- story: district by pincode
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: district
+  - intent: district_by_pincode
   - action: utter_ask_pincode
   - intent: get_pincode
     entities:
