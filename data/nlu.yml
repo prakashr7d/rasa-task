@@ -1,5 +1,4 @@
 version: "3.1"
-
 nlu:
 - intent: greet
   examples: |
@@ -17,7 +16,6 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
 - intent: goodbye
   examples: |
     - cu
@@ -30,7 +28,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -39,7 +36,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -49,7 +45,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -66,7 +61,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -83,20 +77,17 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
 - intent: state_by_pincode
   examples: |
     - State for the pincode
     - give me the state
     - state
-
 - intent: get_pincode
   examples: |
     - [501330](pincode)
@@ -104,18 +95,15 @@ nlu:
     - [434133](pincode)
     - [783478](pincode)
     - [509011](pincode)
-
-- regex: pincode
-  examples: |
-    - \b\d{6}\b
-
+    - [608001](pincode)
 - intent: city
   examples: |
     - city
     - know about my city.
-
 - intent: district
   examples: |
     - district
     - know my district.
-
+- regex: pincode
+  examples: |
+    - \b\d{6}\b
